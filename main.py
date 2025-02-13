@@ -19,6 +19,10 @@ def load_stands():
 def startup_event():
     load_stands()
 
+@app.get("/")
+def read_root():
+    return {"message": "Bienvenido a la API de los stands de JoJo"}
+
 @app.get("/stands")
 def get_stands():
     return stands
