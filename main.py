@@ -32,3 +32,7 @@ def get_stand(stand_id: int):
 def reload_stands():
     load_stands()
     return {"message": "Datos recargados"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=10000)
